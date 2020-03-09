@@ -1,0 +1,69 @@
+{
+    "items": [
+      {
+        "id":"1",
+        "fields": {
+          "title": "kralice yatak",
+          "price": 850.99,
+          "image": { "fields": { "file": { "url": "./img/product-1.jpeg" } } }
+        }
+      },
+      {
+        "id":"2",
+        "fields": {
+          "title": "king yatak",
+          "price": 560.99,
+          "image": { "fields": { "file": { "url": "./img/product-2.jpeg" } } }
+        }
+      },
+      {
+        "id":"3",
+        "fields": {
+          "title": "tek kisilik yatak",
+          "price": 450.99,
+          "image": { "fields": { "file": { "url": "./img/product-3.jpeg" } } }
+        }
+      },
+      {
+        "id":"4",
+        "fields": {
+          "title": "ikiz yatak",
+          "price": 609.99,
+          "image": { "fields": { "file": { "url": "./img/product-4.jpeg" } } }
+        }
+      },
+      {
+        "id":"5",
+        "fields": {
+          "title": "mutfak takımı",
+          "price": 1288.99,
+          "image": { "fields": { "file": { "url": "./img/product-5.jpeg" } } }
+        }
+      },
+      {
+        "id":"6",
+        "fields": {
+          "title": "cekmece",
+          "price": 240.99,
+          "image": { "fields": { "file": { "url": "./img/product-6.jpeg" } } }
+        }
+      },
+      {
+        "id":"7",
+        "fields": {
+          "title": "salon takımı",
+          "price": 2233.99,
+          "image": { "fields": { "file": { "url": "./img/product-7.jpeg" } } }
+        }
+      },
+      {
+        "id":"8",
+        "fields": {
+          "title": "mutfak masası",
+          "price": 300.99,
+          "image": { "fields": { "file": { "url": "./img/product-8.jpeg" } } }
+        }
+      }
+    ]
+  }
+  
