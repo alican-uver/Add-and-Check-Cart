@@ -9,6 +9,7 @@ class Request {
                     id : item.id,
                     title : item.fields.title,
                     price : item.fields.price,
+                    category : item.fields.category,
                     image: item.fields.image.fields.file.url
                 };
             });       

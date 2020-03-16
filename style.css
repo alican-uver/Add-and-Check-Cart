@@ -143,6 +143,12 @@ span.basket-icon {
   background-color: transparent;
 }
 
+.filter-active {
+  background-color:#f1c40f !important;
+  border: none !important;
+}
+
+
 /* Navbar End */
 
 /* ------Section Shopping Cart-------- */
@@ -332,9 +338,6 @@ section#all-products .col-sm-6:hover h1 {
   }
 }
 /* ----- Media Queries End ------ */
-
-
-
 
 
 

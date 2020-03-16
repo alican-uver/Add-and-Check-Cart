@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="tr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
     <script src="https://kit.fontawesome.com/dc0c634418.js"></script>
     <title>Document</title>
 </head>
+
 <body>
 
     <!-- Navbar -->
@@ -54,7 +56,7 @@
 
         <div class="nav-logo text-uppercase">
             <a href="index.html">
-            <img class="text-white" src="/img/house.png">
+                <img class="text-white" src="/img/house.png">
             </a>
         </div>
 
@@ -62,7 +64,7 @@
             <i class="fas fa-shopping-cart"></i>
             <span class="basket-icon">0</span>
         </div>
-      
+
     </nav>
     <!-- Navbar End -->
 
@@ -74,9 +76,9 @@
             </span>
             <h2>Seçilen Ürünler</h2>
             <div class="cart-content">
-                  <!--cart item-->
+                <!--cart item-->
                 <!-- <div class="cart-item"> -->
-                    <!-- <img src="/images/product-1.jpeg" alt="product">
+                <!-- <img src="/images/product-1.jpeg" alt="product">
                     <div>
                         <h4>queen bed</h4>
                         <h5>$9.00</h5>
@@ -88,15 +90,15 @@
                         <i class="fas fa-chevron-down"></i>
 
                     </div> -->
-                </div>
-                <!--End of cart item-->
+            </div>
+            <!--End of cart item-->
             <!-- </div> -->
             <div class="cart-footer">
                 <h3>Toplam Ücret: <br> <span class="cart-total">0 TL</span></h3>
                 <button class="clear-cart btn btn-warning">Sepeti Temizle</button>
             </div>
         </div>
-             
+
     </div>
     <!--Shopping Card End-->
 
@@ -115,13 +117,38 @@
 
     <!-- Best Selling Products -->
     <div class="container">
-        <div class="row mb-0 mt-5">
+        <div class="row mb-0 mt-5 text-center">
             <div class="col-md-12">
-                <h1 class="text-center">Çok Satan Ürünler</h1>
+                <h1 class="mb-4">Çok Satan Ürünler</h1>
+                    <button class="btn btn-info mx-1 mt-2  text-light shadow filter-btn filter-active"
+                        data-category ="all"
+                    >
+                        Tüm Ürünler                   
+                    </button>
+                    <button class="btn btn-info mx-1 mt-2 text-light shadow filter-btn"
+                       data-category ="kitchen"
+                    >
+                        Mutfak                   
+                    </button>
+                    <button class="btn btn-info mx-1 mt-2 text-light shadow filter-btn"
+                        data-category ="livingroom"
+                    >
+                        Oturma Odası                   
+                    </button>
+                    <button class="btn btn-info mx-1 mt-2 text-light shadow filter-btn"
+                        data-category ="bigroom"
+                    >
+                        Salon                   
+                    </button>
+                    <button class="btn btn-info mx-1 mt-2 text-light shadow filter-btn"
+                        data-category ="bedroom"
+                    >
+                        Yatak Odası                   
+                    </button>
             </div>
         </div>
         <div class="row" id="productsDiv">
-             <!-- <div class="col-md-6 col-lg-3 pt-5">
+            <!-- <div class="col-md-6 col-lg-3 pt-5">
                 <div class="card shadow">
                     <img src="/img/product-1.jpeg" class="card-img-top" alt="...">
                     <div class="card-body text-center">
@@ -134,8 +161,18 @@
                 </div>
             </div> -->
         </div>
-    </div>
-    <!-- Best Selling Products End -->
+        <!-- Best Selling Products End -->
+    </div> <!-- Contanier End -->
+
+
+
+
+
+
+
+
+
+
 
     <!-- Footer -->
     <footer class="blog-footer">
@@ -150,6 +187,24 @@
 
 
 
+    <!-- <script>
+
+<p id="demo"></p>
+ <button onclick="typeWriter()">Click me</button>
+
+
+var i = 0;
+var txt = 'Lorem ipsum typing effect!'; /* The text */
+var speed = 50; /* The speed/duration of the effect in milliseconds */
+
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("demo").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
+</script> -->
 
 
 
@@ -160,6 +215,8 @@
     <script src="storage.js"></script>
     <script src="ui.js"></script>
     <script src="app.js"></script>
+
+
 </body>
 
 </html>

@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
     .then(() => { // Second then use is important beacuse this functions needs to check after page loads   
         ui.getBagBtn();
         ui.cartLogic();
+        ui.categoryBtn();
     })
     
     .catch((err) => {
@@ -20,3 +21,17 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
+
+    
+    
+
+
+
+
+
+ 
+
+
+
+
+

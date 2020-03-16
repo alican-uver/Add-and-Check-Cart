@@ -5,6 +5,7 @@
         "fields": {
           "title": "kralice yatak",
           "price": 850.99,
+          "category" : "bedroom",
           "image": { "fields": { "file": { "url": "./img/product-1.jpeg" } } }
         }
       },
@@ -13,6 +14,7 @@
         "fields": {
           "title": "king yatak",
           "price": 560.99,
+          "category" : "bedroom",
           "image": { "fields": { "file": { "url": "./img/product-2.jpeg" } } }
         }
       },
@@ -21,6 +23,7 @@
         "fields": {
           "title": "tek kisilik yatak",
           "price": 450.99,
+          "category" : "bedroom",
           "image": { "fields": { "file": { "url": "./img/product-3.jpeg" } } }
         }
       },
@@ -29,6 +32,7 @@
         "fields": {
           "title": "ikiz yatak",
           "price": 609.99,
+          "category" : "bedroom",
           "image": { "fields": { "file": { "url": "./img/product-4.jpeg" } } }
         }
       },
@@ -37,6 +41,7 @@
         "fields": {
           "title": "mutfak takımı",
           "price": 1288.99,
+          "category" : "kitchen",
           "image": { "fields": { "file": { "url": "./img/product-5.jpeg" } } }
         }
       },
@@ -45,6 +50,7 @@
         "fields": {
           "title": "cekmece",
           "price": 240.99,
+          "category" : "livingroom",
           "image": { "fields": { "file": { "url": "./img/product-6.jpeg" } } }
         }
       },
@@ -53,6 +59,7 @@
         "fields": {
           "title": "salon takımı",
           "price": 2233.99,
+          "category" : "livingroom",
           "image": { "fields": { "file": { "url": "./img/product-7.jpeg" } } }
         }
       },
@@ -61,8 +68,45 @@
         "fields": {
           "title": "mutfak masası",
           "price": 300.99,
+          "category" : "kitchen",
           "image": { "fields": { "file": { "url": "./img/product-8.jpeg" } } }
-        }
+        } 
+      },
+      {
+        "id":"9",
+        "fields": {
+          "title": "salon takımı",
+          "price": 1450.99,
+          "category" : "bigroom",
+          "image": { "fields": { "file": { "url": "./img/product-9.jpg" } } }
+        } 
+      },
+      {
+        "id":"10",
+        "fields": {
+          "title": "salon takımı",
+          "price": 8600.99,
+          "category" : "bigroom",
+          "image": { "fields": { "file": { "url": "./img/product-10.jpg" } } }
+        } 
+      },
+      {
+        "id":"11",
+        "fields": {
+          "title": "koltuk seti",
+          "price": 2600.99,
+          "category" : "livingroom",
+          "image": { "fields": { "file": { "url": "./img/product-11.jpg" } } }
+        } 
+      },
+      {
+        "id":"12",
+        "fields": {
+          "title": "yemek masası",
+          "price": 900.99,
+          "category" : "kitchen",
+          "image": { "fields": { "file": { "url": "./img/product-12.jpg" } } }
+        } 
       }
     ]
   }
