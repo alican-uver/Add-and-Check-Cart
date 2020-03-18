@@ -136,7 +136,6 @@ class UI {
         const btnList = [...document.querySelectorAll(".filter-btn")];
         const allProducts = [...document.querySelectorAll(".furniture")];
         console.log(allProducts);
-        
 
         btnList.forEach(btn => {
             btn.addEventListener("click", function () {
@@ -145,22 +144,22 @@ class UI {
                 });
 
                 this.classList.add("filter-active");
-                
-                const target = this.getAttribute("data-category");
-                
-                for (let k = 0; k < allProducts.length; k++) {
-                    allProducts[k].setAttribute("style", "display : none !important");
 
-                    if (allProducts[k].getAttribute("data-category") == target) {
-                        allProducts[k].setAttribute("style", "display : inline-block !important");
+                const target = this.getAttribute("data-category");
+
+                for (let i = 0; i < allProducts.length; i++) {
+                    allProducts[i].setAttribute("style", "display : none !important");
+
+                    if (allProducts[i].getAttribute("data-category") == target) {
+                        allProducts[i].setAttribute("style", "display : inline-block !important");
                     }
 
                     if (target == "all") {
-                        allProducts[k].setAttribute("style", "display : inline-block !important");
+                        allProducts[i].setAttribute("style", "display : inline-block !important");
                     }
 
                     else {
-                        allProducts[k].classList.add("d-none");
+                        allProducts[i].classList.add("d-none");
                     }
 
                 }

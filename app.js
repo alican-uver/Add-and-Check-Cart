@@ -22,6 +22,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
+const rangeInput = document.getElementById("my-range");
+const pValue = document.getElementById("value");
+rangeInput.addEventListener("change", function() {
+    console.log(rangeInput.value);
+    pValue.innerHTML = `
+        value: ${rangeInput.value}
+    `
+})
+
+
     
     
 
