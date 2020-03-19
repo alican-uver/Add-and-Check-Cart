@@ -242,6 +242,35 @@ span.basket-icon {
 /* Section Shopping Cart End */
 
 /*-------Section All Products Start------*/
+
+/* -------- Form filterPrice -------- */
+#filter-price label{
+  font-size: 14px;
+}
+
+#remove-filter-price span {
+  font-size: 14px;
+  font-weight: lighter;
+}
+
+#remove-filter-price i { 
+  transition: .2s ease;
+  font-size: 18px;
+} 
+
+#remove-filter-price i:hover {
+  color: var(--bg_color);
+} 
+
+#min-price, #max-price {
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.247);
+  outline: none;
+  width: 8%;
+
+}
+
+/* Form filterPrice end */
 section#all-products {
   background: url(/img/hero-bcg.jpeg) no-repeat center/cover ;
   height: calc(100vh - 61px);
@@ -334,8 +363,25 @@ section#all-products .col-sm-6:hover h1 {
   .navbar-sticky .products-menu {
     background-color:rgb(231, 226, 221) !important;
   }
+
+  #min-price, #max-price {
+    border: 1px solid gray;
+    border-radius: 5px;
+  }
+
+  #filter-price button[type ="submit"] {
+    margin-top: 15px;
+    margin-left: 0 !important;
+  }
+
+
+
 }
 /* ----- Media Queries End ------ */
+
+
+
+
 
 
 

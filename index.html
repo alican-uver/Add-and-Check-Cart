@@ -118,7 +118,7 @@
     <!-- Best Selling Products -->
     <div class="container">
         <div class="row mb-0 mt-5 text-center">
-            <div class="col-md-12">
+            <div class="col-md-12" id="filter-products-area">
                 <h1 class="mb-4">Çok Satan Ürünler</h1>
                 <button class="btn btn-info mx-1 mt-2  text-light shadow filter-btn filter-active" data-category="all">
                     Tüm Ürünler
@@ -135,7 +135,29 @@
                 <button class="btn btn-info mx-1 mt-2 text-light shadow filter-btn" data-category="bedroom">
                     Yatak Odası
                 </button>
+                <!-- Form Filter Price -->
+                <form class="form mt-4" id="filter-price">
+                   <label for="min-price">En düşük fiyat:</label> 
+                   <input type="number" id="min-price">
+                   <label for="max-price">En yüksek fiyat:</label> 
+                   <input type="number" id="max-price"> 
+                   <button type="submit" class="btn btn-warning ml-3">
+                    <i class="fas fa-search"></i>
+                   </button>
+                </form>
+                <br>
+                <span id="remove-filter-price">
+                    <!-- <badge class="badge badge-pill badge-info py-2 px-3">
+                        <span>Fiyat Aralığı</span><br><br>
+                        <i class="fas fa-window-close" style="cursor: pointer;"></i>
+                        <span>h</span>
+                        <span>-</span>
+                        <span>h</span>
+                    </badge> -->
+                </span>
             </div>
+                <!-- Form Filter Price End -->
+
         </div>
         <div class="row" id="productsDiv">
             <!-- <div class="col-md-6 col-lg-3 pt-5">
@@ -236,7 +258,7 @@
 
             </div>
             <!-- Social Media Links End -->
-           
+
         </div>
         <div class="footer-copyright text-center py-3">
             © 2020 Copyright
@@ -250,12 +272,13 @@
     <!-- Footer End-->
 
 
-  
 
 
 
 
- 
+
+
+
 
 
 

@@ -12,8 +12,8 @@ class Request {
                     category : item.fields.category,
                     image: item.fields.image.fields.file.url
                 };
-            });       
-            
+            });    
+               
             return products;                      
         }
         catch (error) {

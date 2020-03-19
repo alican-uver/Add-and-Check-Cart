@@ -16,4 +16,9 @@ class Storage {
         return localStorage.getItem("cartProduct") ? JSON.parse(localStorage.getItem("cartProduct")) : [];
     };
 
+    static getProducts () {
+        let products = JSON.parse(localStorage.getItem("products"));
+        return products;
+    }
+
 };

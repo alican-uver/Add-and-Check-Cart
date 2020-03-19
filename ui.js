@@ -4,6 +4,7 @@ class UI {
         this.productsDiv = document.querySelector("#productsDiv");
         this.cart = [];
         this.buttonsDom = [];
+        //Cart Select Elements
         this.displayCartTotal = document.querySelector(".cart-total");
         this.itemCount = document.querySelector(".basket-icon");
         this.cartContent = document.querySelector(".cart-content");
@@ -12,12 +13,16 @@ class UI {
         this.exitCart = document.querySelector(".close-cart");
         this.basketIcon = document.querySelector(".shopping-icon");
         this.clearAllCart = document.querySelector(".clear-cart");
+        //Hamburger Menu Select Element
         this.openingMenuIcon = document.querySelector(".menu-icon");
+        //Filter Price Select Elements
+        this.filterPriceForm = document.getElementById("filter-price");
+        this.minPriceInput = document.getElementById("min-price");
+        this.maxPriceInput = document.getElementById("max-price");
     };
 
     showProductsOnloadPage(products) { //will work when the page loads
         let values = "";
-
         products.forEach(product => {
             values += `
             <div class="col-md-6 col-lg-3 pt-5 furniture" data-category="${product.category}">
@@ -25,7 +30,7 @@ class UI {
                     <img src="${product.image}" class="card-img-top" alt="${product.title}">
                     <div class="card-body text-center">
                         <h5 class="card-title pb-1 text-capitalize">${product.title}</h5>
-                        <h6 class="pb-1">${product.price}</h6>
+                        <h6 class="pb-1" id="product-price">${product.price}</h6>
                         <button class="btn btn-warning bag-btn" data-id="${product.id}">
                             <i class="fas fa-shopping-cart"></i>
                                <span>Sepete Ekle</span>
@@ -135,7 +140,7 @@ class UI {
     categoryBtn() { //Add to Buttons property of category
         const btnList = [...document.querySelectorAll(".filter-btn")];
         const allProducts = [...document.querySelectorAll(".furniture")];
-        console.log(allProducts);
+        // console.log(allProducts);
 
         btnList.forEach(btn => {
             btn.addEventListener("click", function () {
@@ -234,6 +239,7 @@ class UI {
                 let id = lowerAmount.dataset.id;
                 let tempItem = this.cart.find(item => item.id === id);
                 tempItem.amount = tempItem.amount - 1;
+
                 if (tempItem.amount > 0) {
                     this.setCartValues(this.cart);
                     Storage.saveProductFromCart(this.cart);
@@ -269,5 +275,74 @@ class UI {
         this.cartOverlay.classList.remove("transparentBcg");
         this.shoppingCart.classList.remove("show-cart");
     };
+
+    filterProductsForPrice() { //Filtering Price For İnput Value
+        this.filterPriceForm.addEventListener("submit", e => {
+
+            let productsStorage = Storage.getProducts();
+            let minPriceValue = this.minPriceInput.value;
+            let maxPriceValue = this.maxPriceInput.value;
+            this.filterForPriceRange(productsStorage, minPriceValue, maxPriceValue);
+            e.preventDefault();
+        })
+    };
+
+    filterForPriceRange(products, minPrice, maxPrice) { // Catch Filtered Products algorithm
+
+        let filtered = products.filter(p => p.price > minPrice && p.price < maxPrice); //İts Filtering 
+
+        if (filtered.length == 0 || minPrice < 0 || maxPrice < 0) {
+            this.clearInput();
+            this.showAlert("Bu aralıkta ürün bulunamadı", "danger");
+
+        }
+        else {
+            this.showProductsOnloadPage(filtered);
+            this.categoryBtn();
+            this.filteringPriceDOM(minPrice, maxPrice);
+            this.clearInput();
+        }
+
+    };
+
+    filteringPriceDOM(minPrice, maxPrice) { // Show UI filtered product or products 
+        const removePrice = document.querySelector("#remove-filter-price");
+        removePrice.innerHTML = `
+        <badge class="badge badge-info py-1 px-1">
+            <span>Fiyat Aralığı</span><br><br>
+            <i class="fas fa-times-circle" id="exit-filter-price" style="cursor: pointer;"></i>
+            <span>${minPrice} TL</span>
+            <span>-</span>
+            <span>${maxPrice} TL</span>
+        </badge>        
+        `;
+        this.getBagBtn(); // Trigger again cart process
+        this.exitFilterPrice();
+    };
+
+    exitFilterPrice() { //filter range exit btn
+        const exitBtn = document.querySelector("#exit-filter-price");
+        exitBtn.addEventListener("click", () => {
+            window.location.reload();
+        })
+    };
+
+    clearInput() { // Clear Inputs after process
+        this.minPriceInput.value = "";
+        this.maxPriceInput.value = "";
+    };
+
+    showAlert(text, status) { //Created for Bootstrap alert
+        const div = document.createElement("div");
+        div.textContent = text;
+        div.className = `alert alert-${status} text-capitalize`;
+        const filterArea = document.getElementById("filter-products-area");
+        filterArea.appendChild(div);
+        setTimeout(() => {
+            div.remove();
+        }, 1500);
+
+    }
+
 
 };
