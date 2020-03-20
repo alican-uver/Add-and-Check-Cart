@@ -272,7 +272,7 @@ span.basket-icon {
 
 /* Form filterPrice end */
 section#all-products {
-  background: url(/img/hero-bcg.jpeg) no-repeat center/cover ;
+  background: url(/img/mainphoto.jpg) no-repeat center/cover ;
   height: calc(100vh - 61px);
   position: relative;
 }
