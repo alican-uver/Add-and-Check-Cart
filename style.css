@@ -376,6 +376,14 @@ section#all-products .col-sm-6:hover h1 {
 
 
 
+.up {
+  width: 30px;
+  height: 30px;
+  bottom: 2rem;
+  right: 2rem;
+ 
+}
+  
 }
 /* ----- Media Queries End ------ */
 
