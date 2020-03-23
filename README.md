@@ -1,4 +1,4 @@
-# You can Look Live : https://gallant-mcnulty-6ab893.netlify.com/
+#### To review my project live : https://gallant-mcnulty-6ab893.netlify.com/
 
 
 #### I worked with local storage in this project. I worked with the concepts of adding products to the basket, controlling the products, deleting products from the basket and local storage, filtering products according to price information, filtering products according to category classes. I used bootstrap and custom css( especially I used flexbox && grid system ) when creating the interface. In order to make my codes more understandable, I wrote next to each function what the functions mean. I will continue to develop the project later. Happy development!
